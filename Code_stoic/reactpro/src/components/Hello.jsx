@@ -1,8 +1,8 @@
-function Hello({ name, message }) {
+function Hello({ person }) {
   return (
     <div>
       <h1>
-        {message} {emoji} {name}
+        {person.message} {person.name} {person.seatNumbers}
       </h1>
     </div>
   );
