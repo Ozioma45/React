@@ -2,6 +2,11 @@ import { useState } from "react";
 
 export default function Form() {
   const [name, setName] = useState({ firstName: "", lastName: "" });
+
+  function handleSummit(e) {
+    e.preventDefault();
+    console.log(name);
+  }
   return (
     <div>
       {name.firstName}-{name.lastName}
@@ -20,6 +25,8 @@ export default function Form() {
           value={name.lastName}
           onChange={(e) => setName({ ...name, lastName: e.target.value })}
         />
+
+        <button onClick={(e) => handleSummit(e)}>Add</button>
       </form>
     </div>
   );
